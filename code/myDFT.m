@@ -1,5 +1,8 @@
 function [X] = myDFT(x,t)
 % x: input signal
+
+disp('Calculating DFT ::: ');
+
 N = length(x);
 
 X=zeros(1,N);
