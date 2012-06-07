@@ -62,10 +62,58 @@ These slides are based on the course:
 \end{frame}
   
 
+\begin{frame}
+\frametitle{Fourier}
+A simple reminder:
+\begin{itemize}
+\item Fourier Series:
+$$f(t)=\sum_{k=0}^{\infty}(A_{k}\cos{\omega_{k}t} + B_{k}\sin\omega_{k}t)$$
+
+\item Fourier Series in Complex Notation:
+$$f(t)=\sum_{k=-\infty}^{k=+\infty}C_{k}e^{i\omega_{k}t}$$
 
 
+\item Continuous Fourier Transform:
+$$ F(\omega) = \frac{1}{2\pi} \int_{-\infty}^{+\infty} f(t)e^{-i \omega t}dt$$ 
 
 
+\end{itemize}
+\end{frame}
+
+\begin{frame}
+\frametitle{Discrete Fourier Transform (DFT)}
+\begin{itemize}
+
+\item Often, we do not know a function's continous
+  \emph{``behaviour''} over time, but only what happens at $N$
+  discrete times:
+$$t_{k}= k\Delta t, \ \ k=0,1,2,\ldots , N-1 \ (regular sampling!)$$ 
+
+$$e^{i\omega t} \rightarrow e^{i \frac{2\pi t_{k}}{T}}  \rightarrow  e^{\frac{2\pi i k \Delta t}{N \Delta t}} = e^{\frac{2 \pi i k }{N}}$$
+
+$$F_{j} = \frac{1}{N} \sum_{k=0}^{N-1}f_{k}e^{\frac{-j 2 \pi k n}{N}}  $$
+
+\end{itemize}
+\end{frame}
+
+
+\begin{frame}
+\frametitle{Non-uniform Discrete Fourier Transform (NDFT)}
+\begin{itemize}
+\item When the samples are irregularly taken in the time
+domain $t$ but regularly taken in the frequency domain.
+
+\item That is to say that the samples $F_{j}$ of the irregular Fourier
+  transform are taken at multiples of a quantity $\Delta k$, which is
+  a fixed quantity in the Fourier domain ($\frac{k=2 \pi}{T}$, for the
+  regular case).
+
+\item NUDFT:
+$$F_{j}=\sum_{n=0}^{N-1}f_{n}e^{-i\frac{2 \pi}{T}m t_{n}}$$
+
+\end{itemize}
+
+\end{frame}
 
 \end{document}
 
